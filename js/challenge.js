@@ -8,6 +8,12 @@ const form = document.querySelector('#comment-form');
 console.log(form);
 const submit = document.querySelector('#submit');
 
+// Create Likes text display
+let displayLikes = document.createElement('p')
+// let likesList = document.querySelector('.likes');
+// let displayLikes = document.likesList.createElement('p')
+
+
 // Create Restart Button
 const button = document.createElement('button');
 
@@ -46,14 +52,13 @@ plus.addEventListener('click', () => {
 
 // "like" a counter number / see no. of "likes" displayed
 let amtLikes =  0;
-
-let displayLikes = document.createElement('p')
-
 console.log(displayLikes);
-displayLikes.append(`${amtLikes} likes`);
+// numOfLikes = `${amtLikes} likes`;
 like.addEventListener('click', () =>{
   amtLikes++;
-  console.log(amtLikes);
+  displayLikes = `${amtLikes} likes`;
+  console.log(displayLikes);
+  document.body.append(displayLikes);
 });
 
 // Pause Counter
